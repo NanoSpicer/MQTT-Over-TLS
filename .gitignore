@@ -1,2 +1,3 @@
 # the output of the server is something we don't want on vcs
 .server-output
+.conf/pwfile
