@@ -18,8 +18,7 @@ do
   sleep 1
 done
 
-pkill -f mosquitto
-pkill -f mosquitto_sub
-pkill -f mosquitto_pub
+# Clean leftovers
+pkill -f mosquitto mosquitto_pub mosquitto_sub
 
 echo "Done!"
