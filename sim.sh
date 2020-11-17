@@ -1,6 +1,8 @@
 #!/bin/bash
 
-getPidOfSub="ps -ax | grep ./sub.sh | head -n 1 | cut -f 1 -d ' '"
+# Launch the mosquitto server with local config
+./mosquitto.sh > .server-output &
+
 
 # Append & Launch in background
 ./sub.sh localhost 1883 master/default user1 pass1 &
@@ -13,6 +15,8 @@ do
   sleep 1
 done
 
+pkill -f mosquitto
 pkill -f mosquitto_sub
+pkill -f mosquitto_pub
 
 echo "Done!"
