@@ -1,17 +1,20 @@
 #!/bin/bash
 
 # Launch the mosquitto server with local config
-./mosquitto.sh > .server-output &
+./mosquitto.sh 2> .server-output &
 
 
 # Append & Launch in background
-./sub.sh localhost 1883 master/default user1 pass1 &
+sub_user="sub1"
+sub_pass="sub1"
+echo "Subscriber $sub_user up and running!"
+./sub.sh localhost 1883 master/default $sub_user $sub_pass &
 
-echo "Subscriber running on PID $pidOfSub"
-
+pub_user="pub1"
+pub_pass="pub1"
 for i in 1 2 3 4 5
 do
-  ./pub.sh localhost 1883 master/default "Sending message #$i" user1 pass1
+  ./pub.sh localhost 1883 master/default "Sending message #$i" $pub_user $pub_pass
   sleep 1
 done
 
