@@ -1,0 +1,1 @@
+# Broker que no admite usuarios anonimos. Restricción de acceso con ACLfile

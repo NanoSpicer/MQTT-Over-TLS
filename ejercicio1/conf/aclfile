@@ -1,0 +1,10 @@
+user publicador
+topic write test
+
+user suscriptor
+topic read test
+
+# user 'inutil' no puede hacer nada
+
+user dios
+topic readwrite #
