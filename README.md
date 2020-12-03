@@ -1,6 +1,6 @@
 # MQTT-Over-TLS
 
-Configure a mosquitto server
+Configure a **mosquitto** server
 
 `pub.sh` script publishes on a topic
 `sub.sh` script listens to a topic
