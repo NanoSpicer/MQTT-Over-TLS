@@ -9,5 +9,5 @@ Configure a mosquitto server
 # to publish on a topic
 ./pub.sh host port topic "Your message" user password
 # to listen on a topic
-./sub.sh host port topic user password
+./sub.sh host port topic user passwordd
 ```
