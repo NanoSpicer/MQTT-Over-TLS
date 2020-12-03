@@ -11,5 +11,3 @@ fi
 # -g: output each flow in alternating colors
 # -c: console print only (don't create files)
 tcpflow -i any -g -c -D port 1883
-
-# rm report.xml
